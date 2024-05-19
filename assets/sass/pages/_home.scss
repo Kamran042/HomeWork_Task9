@@ -1,0 +1,414 @@
+@import "../layout/header";
+@import "../layout/footer";
+
+.carousell {
+  &__card {
+    background-image: url(https://preview.colorlib.com/theme/fashi/img/hero-2.jpg.webp);
+    @include bg_image;
+    height: 725px;
+    padding-top: 210px;
+    position: relative;
+
+    &__tittle {
+      margin-left: 190px;
+      width: 460px;
+
+      p {
+        color: $orange;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+      h1 {
+        color: $black;
+        font-size: 72px;
+        font-weight: 700;
+        padding-top: 8px;
+      }
+      h2 {
+        font-size: 16px;
+        color: #636363;
+        margin-top: 10px;
+        margin-bottom: 42px;
+        line-height: 26px;
+      }
+      a {
+        // width: 141px;
+        // height: 45px;
+        background-color: $orange;
+        color: white;
+        font-size: 14px;
+        padding: 12px 30px;
+      }
+    }
+    &__btn {
+      &_next {
+        @include btn_next_prev;
+        top: 38%;
+        right: 40px;
+      }
+      &_prev {
+        @include btn_next_prev;
+        left: 40px;
+        top: 38%;
+      }
+    }
+    &__sale {
+      position: absolute;
+      top: 160px;
+      left: 47%;
+      @include carousell_card_sale;
+      width: 154px;
+      height: 154px;
+      @extend flex;
+
+      &_box {
+        width: 144px;
+        height: 144px;
+        border: 2px dashed white;
+        @include carousell_card_sale;
+        @extend flex;
+        flex-direction: column;
+        font-size: 32px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.people {
+  padding: 80px 50px;
+  @extend flex;
+  flex-wrap: wrap;
+  &__card {
+    width: 443px;
+    height: 249px;
+    @extend flex;
+    margin: 0 15px;
+    @include bg_image;
+
+    p {
+      padding: 11px 28px;
+      font-size: 24px;
+      font-weight: 700;
+      color: $black;
+      background-color: white;
+    }
+  }
+
+  &__card:nth-child(1) {
+    background-image: url(https://preview.colorlib.com/theme/fashi/img/banner-1.jpg.webp);
+  }
+  &__card:nth-child(2) {
+    background-image: url(https://preview.colorlib.com/theme/fashi/img/banner-2.jpg.webp);
+  }
+  &__card:nth-child(3) {
+    background-image: url(https://preview.colorlib.com/theme/fashi/img/banner-3.jpg.webp);
+  }
+}
+
+.persCategory {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 80px;
+  @extend flex_h_start_sp_b;
+
+  &_img {
+    width: 347px;
+    height: 620px;
+    background-image: url(https://preview.colorlib.com/theme/fashi/img/products/women-large.jpg.webp);
+    @include bg_image;
+    padding-top: 285px;
+    text-align: center;
+    color: white;
+    h2 {
+      font-size: 48px;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      width: 119px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 5px;
+      border-bottom: 3px solid white;
+    }
+  }
+
+  &__clothes {
+    width: 926px;
+    padding: 0 15px;
+    position: relative;
+    &_views {
+      margin-top: 32px;
+      margin-bottom: 45px;
+      &_ul {
+        @extend flex;
+        gap: 24px;
+        li {
+          font-size: 20px;
+          color: #b2b2b2;
+        }
+        &_activ_li {
+          color: #171717 !important;
+          border-bottom: 2px solid #171717;
+          padding-bottom: 5px;
+        }
+      }
+    }
+    &_cards {
+      @extend flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    &_card {
+      &_img {
+        width: 282px;
+        height: 344px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &_tittle {
+        margin-top: 26px;
+        text-align: center;
+        h2 {
+          font-size: 10px;
+          color: #b2b2b2;
+          font-weight: 700;
+          letter-spacing: 2px;
+        }
+        h3 {
+          font-size: 18px;
+          font-weight: 400;
+          margin-top: 10px;
+          color: $black;
+        }
+        p {
+          color: $orange;
+          font-size: 20px;
+          font-weight: 700;
+          margin-top: 5px;
+        }
+      }
+    }
+    &__btn {
+      color: #d1d1d1;
+      &_next {
+        right: -45px;
+        @include btn_next_prev;
+        top: 45%;
+      }
+      &_prev {
+        left: -45px;
+        @include btn_next_prev;
+        top: 45%;
+      }
+    }
+  }
+}
+
+.man {
+  background-image: url(https://preview.colorlib.com/theme/fashi/img/products/man-large.jpg.webp) !important;
+}
+
+.deal {
+  margin-bottom: 100px;
+  width: 1389px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 0;
+  @include bg_image;
+  background-image: url(https://preview.colorlib.com/theme/fashi/img/time-bg.jpg.webp);
+  &__tittle {
+    width: 540px;
+    margin-left: 150px;
+    text-align: center;
+    h2 {
+      color: $black;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .liniya_h {
+      width: 80px;
+      height: 3px;
+      background: $orange;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h3 {
+      font-size: 16px;
+      color: #6e6e6e;
+      font-weight: 400;
+      line-height: 26px;
+      width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+    p {
+      font-size: 24px;
+      font-weight: 700;
+      color: $orange;
+      margin-top: 20px;
+      span {
+        font-size: 16px;
+        font-weight: 400;
+        color: #636363;
+      }
+    }
+    &__cards {
+      @extend flex;
+      margin-top: 40px;
+      margin-bottom: 50px;
+      gap: 35px;
+      &_box {
+        padding: 10px 14px;
+        background-color: white;
+        width: 75px;
+        height: 86px;
+        text-align: center;
+        border-radius: 3px;
+        h2 {
+          font-size: 36px;
+          color: $orange;
+          margin: 0;
+        }
+        p {
+          margin: 0;
+          font-size: 16px;
+          color: #636363;
+          font-weight: 400;
+          line-height: 26px;
+        }
+      }
+    }
+    a {
+      padding: 12px 30px;
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      background-color: $orange;
+    }
+  }
+}
+
+.img_flexs {
+  @extend flex;
+  width: 100%;
+  overflow: hidden;
+  &__cards {
+    width: 253.09px;
+    height: 320px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.blog {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 72px 0 80px;
+  // text-align: center;
+
+  h2 {
+    color: $black;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  .liniya_h {
+    width: 80px;
+    height: 3px;
+    background: $orange;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__cards {
+    margin-top: 40px;
+    @extend flex;
+    &_box {
+      width: 390px;
+      padding: 0 15px;
+      &__img img {
+        width: 100%;
+        height: 259px;
+      }
+      &__tittle {
+        &__icons {
+          margin-top: 25px;
+          @extend flex_h_start;
+          gap: 17px;
+          &_box {
+            @extend flex;
+            gap: 3px;
+            i {
+              color: $orange;
+            }
+            p {
+              font-size: 16px !important;
+              color: #a2a1a1 !important;
+            }
+          }
+        }
+        &_text{
+            h4 {
+            color: #252525;
+            font-weight: 700;
+            line-height: 30px;
+            margin-bottom: 16px;
+            font-size: 24px;
+            margin-top: 11px;
+            }
+            p {
+            font-size: 16px;
+            font-family: "Muli", sans-serif;
+            color: #636363;
+            font-weight: 400;
+            line-height: 26px;
+            margin: 0 0 15px 0;
+            }
+        }
+      }
+    }
+  }
+}
+
+.delivery{
+    margin-top: 45px;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-bottom: 80px;
+    margin-right: auto;
+    @extend flex;
+    border:1px solid #ebebeb;
+    &__card{
+        width: 390px;
+        height: 95px;
+        border-right:1px solid #ebebeb;
+        @extend flex_h_start_sp_a;
+        padding: 30px 55px 25px;
+        &__tittle{
+            h2{
+                color: #252525;
+                line-height: 20px;
+                font-weight: 700;
+            }
+            p{
+                margin-bottom: 0;
+                color: #252525;
+                line-height: 20px;
+            }
+        }
+    }
+}   

@@ -1,0 +1,42 @@
+@mixin header_icon_by_like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 30px;
+  position: relative;
+}
+
+@mixin header_icon_by_like_postion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  top: -3px;
+  right: -7px;
+  font-size: 11px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $orange;
+}
+
+@mixin bg_image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+@mixin btn_next_prev {
+  position: absolute;
+  width: 30px;
+  height: 45px;
+  font-size: 40px;
+}
+
+@mixin carousell_card_sale{
+    background-color:$orange;
+    color:white;
+    border-radius:50%;
+}

@@ -1,0 +1,226 @@
+@import "../layout/grid";
+@import "../utils/variable";
+@import "../base/reset";
+@import "../base/typography";
+@import "../utils/mixins";
+
+.header__top {
+  @extend flex;
+  border-bottom: 1px solid #e5e5e5;
+  color: $black;
+  height: 55px;
+
+  &__left {
+    @extend flex;
+    gap: 8px;
+    padding-right: 20px;
+    height: 100%;
+    border-right: 1px solid #e5e5e5;
+
+    p {
+      font-size: $header_top__left_fz;
+    }
+  }
+
+  &__center {
+    @extend flex_space_b;
+    width: 700px;
+    padding: 0px 20px;
+    height: 100%;
+    border-right: 1px solid #e5e5e5;
+
+    p {
+      font-size: $header_top_fz;
+    }
+
+    &__left {
+      @extend flex;
+      gap: 8px;
+
+      i {
+        font-size: 12px;
+      }
+    }
+
+    &__right {
+      @extend flex;
+      gap: 15px;
+
+      i {
+        color: black;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__right {
+    @extend flex;
+
+    &__language {
+      @extend flex;
+      gap: 5px;
+      padding: 20px;
+      border-right: 1px solid #e5e5e5;
+      // margin-top: 50px;
+      i {
+        font-size: 9px;
+      }
+    }
+
+    &__login {
+      @extend flex;
+      padding-left: 20px;
+      gap: 5px;
+
+      i {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.header__description {
+  width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 0;
+  @extend flex_space_b;
+
+  &__left img {
+    width: 88px;
+    height: 23px;
+  }
+
+  &__center {
+    width: 682px;
+    @extend flex_space_b;
+    border: 1px solid $grey;
+    height: 48px;
+
+    &_fltr_inp {
+      @extend flex;
+      gap: 20px;
+    }
+
+    &__filtir {
+      width: 186px;
+      @extend flex_space_b;
+      padding-left: 23px;
+      padding-right: 13px;
+      border-right: 1px solid $grey;
+
+      button {
+        border: none;
+        background: none;
+        font-size: 16px;
+      }
+
+      i {
+        font-size: 12px;
+        color: #b2b2b2;
+      }
+    }
+    &__search{
+      width: 48px;
+      height: 48px;
+      @extend flex;
+      color: white;
+      background-color: $orange;
+      font-size: 14px;
+      font-weight: 100;
+    }
+  }
+
+  &__right {
+    @extend flex;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 700;
+
+    &_icon{
+      @include header_icon_by_like;
+
+      a i{
+        font-size: 22px;
+        color: $black;
+      }
+
+      &_top_position{
+        @include header_icon_by_like_postion;
+      }
+    }
+  }
+}
+
+.header__nav{
+  background-color: $black;
+  &_box{
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    // height: 106px;
+    &_top{
+      @extend flex_space_b;
+      
+      &_filtir{
+        @extend flex_space_b;
+        width: 272px;
+        padding: 14px 18px;
+        color: white;
+        background-color: $header_nav_filtir;
+        &_left{
+          @extend flex;
+          gap: 16px;
+          
+          h2{
+            font-size: 14px;
+            font-weight: 700;
+          }
+        }
+        p{
+          font-size: 20px;
+          font-family: 'FontAwesome';
+        }
+      }
+
+      &__list_ul{
+        @extend flex;
+    
+        li a{
+          padding: 15px 45px;
+          color: white;
+          border-right:2px solid $header_nav_filtir;
+          font-size: 14px;
+          font-weight: 700;
+        }
+    
+        &_activ_list{
+          background-color:$orange;
+        }
+      }
+    }
+
+    &__menu{
+      background-color: $header_nav_menu_bg;
+      height: 56px;
+      @extend flex_v_end;
+      padding: 5px;
+
+      &_btn a{
+        width: 92px;
+        height: 33px;
+        @extend flex_space_b;
+        padding: 7px 10px;
+        color: white;
+        background-color: #222222;
+        border-radius: 4px;
+        font-weight: 700;
+      }
+    }
+  }  
+
+  
+
+
+  
+}
